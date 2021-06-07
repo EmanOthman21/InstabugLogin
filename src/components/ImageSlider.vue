@@ -57,7 +57,8 @@ export default {
 @import "../style/_variables.scss";
 
 .slider {
-  width: 50vw;
+  width: 50%;
+  float: left;
   height: 100vh;
   text-align: center;
   background-color: $color-dark-blue;

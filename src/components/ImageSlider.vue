@@ -7,6 +7,14 @@
       draggable="false"
     />
     <p class="slider__txt">{{ this.curText }}</p>
+    <div>
+      <span
+        class="slider__dot"
+        :class="{ active: index === currentIndex }"
+        v-for="(item, index) in 3"
+        :key="item"
+      ></span>
+    </div>
   </div>
 </template>
 
@@ -51,6 +59,7 @@ export default {
 .slider {
   width: 50vw;
   height: 100vh;
+  text-align: center;
   background-color: $color-dark-blue;
   @media (max-width: 992px) {
     display: none;
@@ -59,16 +68,26 @@ export default {
   &__img {
     padding-top: 80px;
     width: 35vw;
-    height: auto;
+    height: 60vh;
     display: block;
     margin: 0 auto;
   }
 
   &__txt {
-    text-align: center;
     color: white;
     margin: 50px 0;
     font-size: 26px;
+  }
+  &__dot {
+    height: 8px;
+    width: 8px;
+    margin: 0 2px;
+    border: 2px solid white;
+    border-radius: 50%;
+    display: inline-block;
+    &.active {
+      background-color: white;
+    }
   }
 }
 </style>

@@ -7,11 +7,13 @@
         <p class>Log in to Instabug</p>
         <div class="social">
           <button class="social__button google">
-            <img
-              src="../assets/google.png"
-              alt="google-icon"
-              class="social__button__img"
-            />
+            <span>
+              <img
+                src="../assets/google.png"
+                alt="google-icon"
+                class="social__button__img"
+              />
+            </span>
             Google
           </button>
           <button class="social__button github">
@@ -30,6 +32,9 @@
             />
             Microsoft
           </button>
+        </div>
+        <div class="divider">
+          <span class="divider__title">OR</span>
         </div>
       </div>
     </div>
@@ -61,6 +66,7 @@ export default {
   &__img {
     width: 20px;
     height: 20px;
+    float: left;
   }
 }
 .google {
@@ -76,5 +82,21 @@ export default {
   content: "";
   display: table;
   clear: both;
+}
+.divider {
+  border: 1px solid $color-light-gray;
+  height: 0;
+  display: block;
+  line-height: 1px;
+  margin: 25px auto;
+  max-width: 25vw;
+
+  &__title {
+    background: $color-white;
+    font-size: 18px;
+    padding: 0 15px;
+    color: $color-dark-gray;
+    font-weight: 600;
+  }
 }
 </style>

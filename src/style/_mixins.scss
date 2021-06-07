@@ -1,0 +1,12 @@
+@mixin socialBtn($backgroundColor, $textColor, $borderColor) {
+  background-color: $backgroundColor;
+  color: $textColor;
+  width: 30vw;
+  height: 40px;
+  display: block;
+  margin: 4px auto;
+  border-radius: 4px;
+  border: 2px solid $borderColor;
+  font-weight: 600;
+  font-size: 14px;
+}

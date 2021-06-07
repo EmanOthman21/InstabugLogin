@@ -8,7 +8,7 @@
         <div class="social">
           <button class="social__button google">
             <img
-              src="../assets/google.svg"
+              src="../assets/google.png"
               alt="google-icon"
               class="social__button__img"
             />
@@ -48,6 +48,8 @@ export default {
 
 <style lang="scss" scoped>
 @import "../style/_variables.scss";
+@import "../style/_mixins.scss";
+
 .right-col {
   width: 50%;
   float: left;
@@ -56,17 +58,20 @@ export default {
 }
 
 .social__button {
-  width: 30vw;
-  height: 40px;
-  display: block;
-  margin: 4px auto;
-
   &__img {
     width: 20px;
     height: 20px;
   }
 }
-
+.google {
+  @include socialBtn($color-light-blue, $color-white, $color-light-blue);
+}
+.github {
+  @include socialBtn($color-dark-gray, $color-white, $color-dark-gray);
+}
+.microsoft {
+  @include socialBtn($color-white, $color-dark-gray, $color-dark-gray);
+}
 .row:after {
   content: "";
   display: table;

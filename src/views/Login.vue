@@ -41,7 +41,7 @@
             Your email and/or password are correct
           </span>
         </div>
-        <form class="form" @submit.prevent="submit">
+        <form class="form" @submit.prevent="login">
           <label for="email" class="form__label">Work Email</label>
           <a href="/login" class="form__anchor">Forget Password?</a><br />
           <input
@@ -70,7 +70,13 @@
             >Password must be 6 characters or more</span
           >
           <br />
-          <button type="submit" class="form__button">Log In</button>
+          <button
+            type="submit"
+            class="form__button"
+            :disabled="!(validEmail && validPassword)"
+          >
+            Log In
+          </button>
         </form>
       </div>
     </div>
@@ -91,6 +97,16 @@ export default {
       validEmail: true,
       validPassword: true,
       loginError: false,
+      validData: [
+        { email: "mohamed@instabug.com", password: "P12345678" },
+        { email: "mohamed1@instabug.com", password: "12345678" },
+        { email: "mohamed2@instabug.com", password: "12345678" },
+        { email: "mohamed3@instabug.com", password: "12345678" },
+        { email: "mohamed4@instabug.com", password: "12345678" },
+        { email: "mohamed5@instabug.com", password: "12345678" },
+        { email: "mohamed6@instabug.com", password: "12345678" },
+        { email: "mohamed7@instabug.com", password: "12345678" },
+      ],
     };
   },
   methods: {
@@ -107,6 +123,19 @@ export default {
         !/[0-9]/.test(this.password)
           ? false
           : true;
+    },
+    login() {
+      let exist = this.validData.find(
+        (user) => user.email === this.email && user.password === this.password
+      )
+        ? true
+        : false;
+      if (exist) {
+        localStorage.setItem("loggedIn", true);
+        this.$router.push("/");
+      } else {
+        this.loginError = true;
+      }
     },
   },
 };

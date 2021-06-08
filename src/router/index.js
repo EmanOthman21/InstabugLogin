@@ -15,6 +15,7 @@ const routes = [
     component: Welcome,
     meta: {
       allowAnonymous: false,
+      title: "Home | Instabug",
     },
   },
   {
@@ -23,6 +24,7 @@ const routes = [
     component: Login,
     meta: {
       allowAnonymous: true,
+      title: "Login | Instabug",
     },
   },
   {
@@ -31,6 +33,7 @@ const routes = [
     component: NotFound,
     meta: {
       allowAnonymous: true,
+      title: "Not Found | Instabug",
     },
   },
 ];
@@ -55,4 +58,9 @@ router.beforeEach((to, from, next) => {
   }
 });
 
+router.afterEach((to) => {
+  Vue.nextTick(() => {
+    document.title = to.meta.title || "Instabug";
+  });
+});
 export default router;

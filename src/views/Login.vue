@@ -6,7 +6,7 @@
         <img src="../assets/logo.svg" alt="logo" />
         <p class>Log in to Instabug</p>
         <div class="social">
-          <button class="social__button google">
+          <a href="#" class="social__button google">
             <span>
               <img
                 src="../assets/google.png"
@@ -15,23 +15,23 @@
               />
             </span>
             Google
-          </button>
-          <button class="social__button github">
+          </a>
+          <a href="#" class="social__button github">
             <img
               src="../assets/github.svg"
               alt="github-icon"
               class="social__button__img"
             />
             GitHub
-          </button>
-          <button class="social__button microsoft">
+          </a>
+          <a href="#" class="social__button microsoft">
             <img
               src="../assets/microsoft.svg"
               alt="microsoft-icon"
               class="social__button__img"
             />
             Microsoft
-          </button>
+          </a>
         </div>
         <div class="divider">
           <span class="divider__title">OR</span>
@@ -67,6 +67,9 @@ export default {
     width: 20px;
     height: 20px;
     float: left;
+    margin: 0 0 0px 10px;
+    position: relative;
+    top: -4px;
   }
 }
 .google {

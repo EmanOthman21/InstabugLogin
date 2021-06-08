@@ -131,7 +131,7 @@ export default {
         ? true
         : false;
       if (exist) {
-        localStorage.setItem("loggedIn", true);
+        localStorage.setItem("email", this.email);
         this.$router.push("/");
       } else {
         this.loginError = true;

@@ -1,9 +1,5 @@
 const isLoggedIn = () => {
-  return localStorage.getItem("loggedIn") ? true : false;
+  return localStorage.getItem("userEmail") ? true : false;
 };
 
-const logout = () => {
-  localStorage.removeItem("loggedIn");
-};
-
-export { isLoggedIn, logout };
+export { isLoggedIn };

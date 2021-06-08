@@ -48,9 +48,15 @@
             id="email"
             type="email"
             class="form__input"
+            :class="{ invalid: !validEmail }"
             v-model="email"
             placeholder="you@company.com"
-          /><br />
+            @blur="validateEmail()"
+          />
+          <span class="form__error" v-if="!validEmail"
+            >Enter a valid email address</span
+          >
+          <br />
           <label for="password" class="form__label">Password</label><br />
           <input
             id="password"
@@ -58,7 +64,11 @@
             class="form__input"
             v-model="password"
             placeholder="8+ Characters"
-          /><br />
+          />
+          <span class="form__error" v-if="!validPassword"
+            >Password must be 6 characters or more</span
+          >
+          <br />
           <button type="submit" class="form__button">Log In</button>
         </form>
       </div>
@@ -77,8 +87,19 @@ export default {
     return {
       email: "",
       password: "",
+      validEmail: true,
+      validPassword: true,
       loginError: false,
     };
+  },
+  methods: {
+    validateEmail() {
+      //eslint-disable-next-line
+      if (!/^\S+@\S+\.\S+$/.test(this.email)) this.validEmail = false;
+      else this.validEmail = true;
+      console.log(this.validEmail);
+    },
+    validatePassword() {},
   },
 };
 </script>
@@ -158,7 +179,8 @@ export default {
     @include inputArea();
     @include customBorder($color-white, $color-light-gray);
     color: $color-label;
-    padding: 4px 0;
+    padding: 4px 0 4px 10px;
+    outline: none;
     &::placeholder {
       color: $color-light-gray;
       padding-left: 10px;
@@ -178,5 +200,13 @@ export default {
     @include text(normal, 14px, $color-white);
     height: 40px;
   }
+  &__error {
+    float: left;
+    margin-left: 190px;
+    @include text(normal, 11px, $color-error);
+  }
+}
+.invalid {
+  border-color: $color-error;
 }
 </style>

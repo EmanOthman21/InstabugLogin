@@ -64,6 +64,7 @@
             class="form__input"
             v-model="password"
             placeholder="8+ Characters"
+            @blur="validatePassword"
           />
           <span class="form__error" v-if="!validPassword"
             >Password must be 6 characters or more</span
@@ -95,11 +96,18 @@ export default {
   methods: {
     validateEmail() {
       //eslint-disable-next-line
-      if (!/^\S+@\S+\.\S+$/.test(this.email)) this.validEmail = false;
-      else this.validEmail = true;
-      console.log(this.validEmail);
+      this.validEmail= !/^\S+@\S+\.\S+$/.test(this.email)? false: true;
     },
-    validatePassword() {},
+    validatePassword() {
+      let addressName = this.email.substring(0, this.email.indexOf("@"));
+      this.validPassword =
+        this.password.includes(addressName) ||
+        !/[A-Z]/.test(this.password) ||
+        this.password.length < 9 ||
+        !/[0-9]/.test(this.password)
+          ? false
+          : true;
+    },
   },
 };
 </script>
@@ -183,7 +191,7 @@ export default {
     outline: none;
     &::placeholder {
       color: $color-light-gray;
-      padding-left: 10px;
+      //padding-left: 10px;
     }
   }
   &__label {

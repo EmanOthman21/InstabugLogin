@@ -41,7 +41,6 @@ export default {
   }
   &__welcome {
     @include text(normal, 26px, $color-label);
-    //margin: 20px 0;
   }
   &__btn {
     @include inputArea();

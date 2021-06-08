@@ -1,6 +1,10 @@
 <template>
-  <div class="not-found">
-    <h1>Page is not found</h1>
+  <div class="notfound">
+    <img src="../assets/not-found.jpg" alt="notfound" class="notfound__img" />
+    <span class="notfound__title">404 - Page Not Found!</span>
+    <span class="notfound__txt"
+      >Sorry, that page doesn’t exist. What would you like to do?</span
+    >
   </div>
 </template>
 
@@ -9,3 +13,27 @@ export default {
   name: "NotFound",
 };
 </script>
+
+<style lang="scss" scoped>
+@import "../style/_variables.scss";
+@import "../style/_mixins.scss";
+.notfound {
+  text-align: center;
+  &__img {
+    padding-top: 30px;
+    width: auto;
+    height: 400px;
+    display: block;
+    margin: 30px auto;
+  }
+  &__title {
+    @include text(bold, 26px, $color-dark-blue);
+    display: block;
+  }
+  &__txt {
+    @include text(normal, 16px, $color-not-found);
+    margin-top: 30px;
+    display: block;
+  }
+}
+</style>

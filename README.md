@@ -8,12 +8,12 @@
   - [Installation](#installation)
   - [Running](#running)
 - [File Structure](#file-structure)
-- [Screenshots]((#screenshots))
+- [Screenshots](#screenshots)
 - [Contributors](#contributors)
 - [License](#license)
 
 ## About
-> InstaLogin is a simple login page with email and password validation for Instabug front-end coding challenge.
+> InstaLogin is a simple login page with email and password validation for Instabug front-end coding challenge.Try it from [here](https://emanothman21.github.io/InstabugLogin/).
 
 ### Build with
 - [Vue JS](https://vuejs.org/)
@@ -95,7 +95,7 @@ InstaLogin
 
 </div>
 
-### Screenshots
+## Screenshots
 <h3 align="center">Login Page</h3>
 
 ![image](https://user-images.githubusercontent.com/47359992/121408313-90e67d80-c960-11eb-8500-45beb57af5be.png)

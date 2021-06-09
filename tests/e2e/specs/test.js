@@ -22,7 +22,7 @@ describe("Test Login Form", () => {
     cy.get("#email").type("mohamed@instabug.com");
     cy.get("#password").type("P12345678");
     cy.get("#submit").click();
-    cy.url().should("eq", "http://localhost:8080/");
+    cy.url().should("eq", "http://localhost:8080/InstabugLogin/");
   });
 
   it("Scenario4: Invalid Email Address Format", () => {

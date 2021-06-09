@@ -55,6 +55,7 @@ export default {
 
 <style lang="scss" scoped>
 @import "../style/_variables.scss";
+@import "../style/_mixins.scss";
 
 .slider {
   width: 50%;
@@ -62,12 +63,9 @@ export default {
   height: 100vh;
   text-align: center;
   background-color: $color-dark-blue;
-  @media (max-width: 992px) {
-    display: none;
-  }
 
   &__img {
-    padding-top: 80px;
+    padding-top: $spacing-md;
     width: 35vw;
     height: 60vh;
     display: block;
@@ -75,13 +73,12 @@ export default {
   }
 
   &__txt {
-    color: white;
+    @include text(normal, 26px, $color-white);
     margin: 50px 0;
-    font-size: 26px;
   }
   &__dot {
-    height: 8px;
-    width: 8px;
+    height: $spacing-xs;
+    width: $spacing-xs;
     margin: 0 2px;
     border: 2px solid white;
     border-radius: 50%;

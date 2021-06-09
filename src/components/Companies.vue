@@ -38,12 +38,12 @@ export default {
     align-items: center;
   }
   &__title {
-    @include text(normal, 13px, $color-companies);
+    @include text(normal, $text-sm, $color-companies);
   }
   &__img {
-    margin: 10px;
-    max-width: 80px;
-    max-height: 30px;
+    margin: $spacing-xs;
+    max-width: $spacing-md;
+    max-height: $spacing-x-s;
     width: auto;
   }
 }

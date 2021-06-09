@@ -20,19 +20,19 @@ export default {
 .notfound {
   text-align: center;
   &__img {
-    padding-top: 30px;
+    padding-top: $spacing-x-s;
     width: auto;
-    height: 400px;
+    height: 25em;
     display: block;
-    margin: 30px auto;
+    margin: $spacing-x-s auto;
   }
   &__title {
     @include text(bold, 26px, $color-dark-blue);
     display: block;
   }
   &__txt {
-    @include text(normal, 16px, $color-not-found);
-    margin-top: 30px;
+    @include text(normal, $text-md, $color-not-found);
+    margin-top: $spacing-x-s;
     display: block;
   }
 }

@@ -6,7 +6,7 @@
       </span>
     </div>
     <label for="email" class="form__label">Work Email</label>
-    <a href="/login" class="form__anchor">Forget Password?</a><br />
+    <br />
     <input
       id="email"
       type="email"
@@ -20,7 +20,8 @@
       >Enter a valid email address</span
     >
     <br />
-    <label for="password" class="form__label">Password</label><br />
+    <label for="password" class="form__label">Password</label>
+    <a href="/login" class="form__anchor">Forget Password?</a><br />
     <input
       id="password"
       type="password"
@@ -105,7 +106,7 @@ export default {
     @include inputArea();
     @include customBorder($color-white, $color-light-gray);
     color: $color-label;
-    padding: 4px 0 4px 10px;
+    padding: $spacing-xxs 0 $spacing-xxs $spacing-xs;
     outline: none;
     &::placeholder {
       color: $color-light-gray;
@@ -114,16 +115,16 @@ export default {
   &__label {
     float: left;
     margin-left: 190px;
-    @include text(normal, 14px, $color-label);
+    @include text(normal, $text-sm, $color-label);
   }
   &__anchor {
-    @include text(normal, 14px, $color-light-gray);
+    @include text(normal, $text-sm, $color-light-gray);
   }
   &__button {
     @include inputArea();
-    @include text(normal, 14px, $color-white);
+    @include text(normal, $text-sm, $color-white);
     @include customBorder($color-light-blue, $color-light-blue);
-    height: 40px;
+    height: $spacing-x-md;
     &:hover {
       background-color: $color-btn-hover;
     }
@@ -133,22 +134,21 @@ export default {
     }
   }
   &__error {
+    @include text(normal, 11px, $color-error);
     float: left;
     margin-left: 190px;
-    @include text(normal, 11px, $color-error);
   }
 }
 .invalid {
   border-color: $color-error;
 }
 .login__error {
-  border: 1px solid $color-label;
+  @include customBorder($color-light-semion, $color-label);
   border-radius: 3px;
-  background-color: $color-light-semion;
   color: $color-label;
   max-width: 25vw;
-  margin: 25px auto;
+  margin: $spacing-xx-s auto;
   text-align: start;
-  padding: 10px 0 10px 4px;
+  padding: $spacing-xs 0 $spacing-xs $spacing-xxs;
 }
 </style>

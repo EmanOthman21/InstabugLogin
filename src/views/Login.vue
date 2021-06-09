@@ -65,24 +65,24 @@ export default {
 .right-col {
   width: 50%;
   float: left;
-  margin-top: 50px;
+  margin-top: 3.125em;
   text-align: center;
 }
 
 .instabug {
   @include text(normal, 24px, $color-label);
   display: block;
-  margin: 15px 0;
+  margin: 1em 0;
 }
 .social__button {
   @include inputArea();
-  @include text(600, 16px, $color-white);
-  padding: 12px 0 0 0;
+  @include text(bold, $text-md, $color-white);
+  padding: $spacing-s 0 0 0;
   &__img {
-    width: 20px;
-    height: 20px;
+    width: $spacing-xx-s;
+    height: $spacing-xx-s;
     float: left;
-    margin: 0 0 0px 10px;
+    margin: 0 0 0 $spacing-s;
     position: relative;
     top: -4px;
   }
@@ -103,15 +103,13 @@ export default {
   height: 1px;
   display: block;
   line-height: 2px;
-  margin: 25px auto;
+  margin: $spacing-x-s auto;
   max-width: 25vw;
 
   &__title {
+    @include text(bold, $text-md, $color-dark-gray);
     background: $color-white;
-    font-size: 18px;
-    padding: 0 5px;
-    color: $color-dark-gray;
-    font-weight: 600;
+    padding: 0 $spacing-xs;
   }
 }
 </style>

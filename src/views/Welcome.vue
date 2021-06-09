@@ -33,11 +33,11 @@ export default {
 .home {
   text-align: center;
   &__logo {
-    padding-top: 80px;
-    width: 100px;
-    height: 100px;
+    padding-top: $spacing-md;
+    width: 7.25em;
+    height: 7.25em;
     display: block;
-    margin: 30px auto;
+    margin: $spacing-x-s auto;
   }
   &__welcome {
     @include text(normal, 26px, $color-label);
@@ -45,10 +45,10 @@ export default {
   &__btn {
     @include inputArea();
     @include customBorder($color-light-blue, $color-light-blue);
-    @include text(600, 16px, $color-white);
-    margin-top: 30px;
-    height: 40px;
-    width: 200px;
+    @include text(bold, $text-md, $color-white);
+    margin-top: $spacing-x-s;
+    height: $spacing-x-md;
+    width: 12.5em;
     &:hover {
       background-color: $color-btn-hover;
     }

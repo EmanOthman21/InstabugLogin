@@ -8,6 +8,7 @@
   - [Installation](#installation)
   - [Running](#running)
 - [File Structure](#file-structure)
+- [Screenshots]((#screenshots))
 - [Contributors](#contributors)
 - [License](#license)
 

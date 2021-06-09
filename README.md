@@ -1,4 +1,9 @@
-<h3 align="center">InstaLog</h3>
+<div align="center">
+<a href="https://github.com/EmanOthman21/InstabugLogin" rel="noopener">
+  
+![Group 69](https://user-images.githubusercontent.com/40190772/121434253-5212f080-c97d-11eb-9566-74c79a994408.png)
+
+</div>
 
 <div align="center">
   

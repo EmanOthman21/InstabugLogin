@@ -1,6 +1,11 @@
 <template>
   <div class="home">
-    <img src="../assets/logo.svg" alt="logo" class="home__logo" />
+    <img
+      src="../assets/logo.svg"
+      alt="logo"
+      class="home__logo"
+      draggable="false"
+    />
     <span class="home__welcome"
       >Welcome to <strong>{{ email }}</strong></span
     >

@@ -3,7 +3,7 @@
     <span class="companies__title">Trusted by the top companies</span><br />
     <div class="companies__container">
       <div v-for="image in imgs" :key="image" class="companies__imgs">
-        <img :src="image" alt="logo" class="companies__img" />
+        <img :src="image" alt="logo" class="companies__img" draggable="false" />
       </div>
     </div>
   </div>

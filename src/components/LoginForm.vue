@@ -118,7 +118,8 @@ export default {
     @include inputArea();
     @include customBorder($color-white, $color-light-gray);
     color: $color-label;
-    padding: $spacing-xxs 0 $spacing-xxs $spacing-s;
+    padding: $spacing-xs 0 $spacing-xs $spacing-s;
+    margin: 8px auto;
     outline: none;
     &::placeholder {
       color: $color-light-gray;
@@ -126,13 +127,13 @@ export default {
   }
   &__label,
   &__signup {
+    @include text($text-sm, $color-label);
     position: relative;
     top: 0px;
     left: -112px;
-    @include text($text-sm, $color-label);
   }
   &__anchor {
-    @include text($text-sm, $color-light-gray);
+    @include text($text-sm, #a6a6a6);
     position: relative;
     top: 0px;
     right: -110px;
@@ -180,7 +181,7 @@ export default {
   border-radius: 3px;
   color: $color-label;
   max-width: 400px;
-  margin: $spacing-xx-s auto;
+  margin: $spacing-xs auto;
   text-align: start;
   padding: $spacing-xs 0 $spacing-xs $spacing-xxs;
 }

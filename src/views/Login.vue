@@ -2,15 +2,16 @@
   <div class="container login">
     <ImageSlider />
     <div class="right-col">
-      <img src="../assets/logo.svg" alt="logo" />
+      <img src="../assets/logo.svg" alt="logo" draggable="false" />
       <span class="instabug">Log in to Instabug</span>
       <div class="social">
         <router-link to="/login" class="social__button google">
           <span>
             <img
-              src="../assets/google.png"
+              src="../assets/google-logo.svg"
               alt="google-icon"
-              class="social__button__img"
+              class="social__button__img google__icon"
+              draggable="false"
             />
           </span>
           Google
@@ -20,6 +21,7 @@
             src="../assets/github.svg"
             alt="github-icon"
             class="social__button__img"
+            draggable="false"
           />
           GitHub
         </router-link>
@@ -28,6 +30,7 @@
             src="../assets/microsoft.svg"
             alt="microsoft-icon"
             class="social__button__img"
+            draggable="false"
           />
           Microsoft
         </router-link>
@@ -75,7 +78,7 @@ export default {
 .instabug {
   @include text(2rem, $color-label);
   display: block;
-  margin: 1em 0;
+  margin: 0.75em 0;
 }
 .social__button {
   @include inputArea();
@@ -91,7 +94,12 @@ export default {
   }
 }
 .google {
-  @include customBorder($color-light-blue, $color-light-blue);
+  @include customBorder(#4285f4, $color-light-blue);
+  &__icon {
+    width: 26px;
+    height: 26px;
+    margin-left: 4px;
+  }
 }
 .github {
   @include customBorder($color-dark-gray, $color-dark-gray);

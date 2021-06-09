@@ -1,6 +1,11 @@
 <template>
   <div class="notfound">
-    <img src="../assets/not-found.jpg" alt="notfound" class="notfound__img" />
+    <img
+      src="../assets/not-found.jpg"
+      alt="notfound"
+      class="notfound__img"
+      draggable="false"
+    />
     <span class="notfound__title">404 - Page Not Found!</span>
     <span class="notfound__txt"
       >Sorry, that page doesn’t exist. What would you like to do?</span

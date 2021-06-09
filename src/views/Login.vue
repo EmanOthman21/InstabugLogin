@@ -1,44 +1,42 @@
 <template>
   <div class="container login">
-    <div>
-      <ImageSlider />
-      <div class="right-col">
-        <img src="../assets/logo.svg" alt="logo" />
-        <span class="instabug">Log in to Instabug</span>
-        <div class="social">
-          <a href="/login" class="social__button google">
-            <span>
-              <img
-                src="../assets/google.png"
-                alt="google-icon"
-                class="social__button__img"
-              />
-            </span>
-            Google
-          </a>
-          <a href="/login" class="social__button github">
+    <ImageSlider />
+    <div class="right-col">
+      <img src="../assets/logo.svg" alt="logo" />
+      <span class="instabug">Log in to Instabug</span>
+      <div class="social">
+        <router-link to="/login" class="social__button google">
+          <span>
             <img
-              src="../assets/github.svg"
-              alt="github-icon"
+              src="../assets/google.png"
+              alt="google-icon"
               class="social__button__img"
             />
-            GitHub
-          </a>
-          <a href="/login" class="social__button microsoft">
-            <img
-              src="../assets/microsoft.svg"
-              alt="microsoft-icon"
-              class="social__button__img"
-            />
-            Microsoft
-          </a>
-        </div>
-        <div class="divider">
-          <span class="divider__title">OR</span>
-        </div>
-        <LoginForm />
-        <Companies />
+          </span>
+          Google
+        </router-link>
+        <router-link to="/login" class="social__button github">
+          <img
+            src="../assets/github.svg"
+            alt="github-icon"
+            class="social__button__img"
+          />
+          GitHub
+        </router-link>
+        <router-link to="/login" class="social__button microsoft">
+          <img
+            src="../assets/microsoft.svg"
+            alt="microsoft-icon"
+            class="social__button__img"
+          />
+          Microsoft
+        </router-link>
       </div>
+      <div class="divider">
+        <span class="divider__title">OR</span>
+      </div>
+      <LoginForm />
+      <Companies />
     </div>
   </div>
 </template>
@@ -61,6 +59,10 @@ export default {
 <style lang="scss" scoped>
 @import "../style/_variables.scss";
 @import "../style/_mixins.scss";
+
+.login {
+  overflow: hidden;
+}
 
 .right-col {
   max-height: 100vh;

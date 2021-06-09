@@ -1,4 +1,4 @@
-<h2 align="center">InstaLog</h2>
+<h2>InstaLog</h2>
 
 ## Table of Contents
 
@@ -111,7 +111,7 @@ InstaLogin
 
 ![image](https://user-images.githubusercontent.com/47359992/121409205-87114a00-c961-11eb-84b3-0687f6e51ad1.png)
 
-<h3 align="center">Home Page</h3>
+<h3 align="center">Welcome Page</h3>
 
 ![image](https://user-images.githubusercontent.com/47359992/121409347-ae681700-c961-11eb-825f-e9ea340bee7e.png)
 

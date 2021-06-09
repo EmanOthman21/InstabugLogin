@@ -15,7 +15,7 @@ const routes = [
     component: Welcome,
     meta: {
       allowAnonymous: false,
-      title: "Home | Instabug",
+      title: "Welcome | Instabug",
     },
   },
   {

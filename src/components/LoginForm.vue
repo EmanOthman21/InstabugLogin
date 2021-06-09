@@ -36,7 +36,7 @@
     <span class="form__error" v-if="!validPassword"
       >Password must be 6 characters or more</span
     >
-    <!-- <br /> -->
+    <br v-if="!validPassword" />
     <button
       id="submit"
       type="submit"
@@ -101,7 +101,7 @@ export default {
         : false;
       if (exist) {
         localStorage.setItem("userEmail", this.email);
-        this.$router.push("/");
+        this.$router.push("/welcome");
       } else {
         this.loginError = true;
       }

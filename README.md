@@ -1,4 +1,19 @@
-<h2>InstaLog</h2>
+<h3 align="center">InstaLog</h3>
+
+<div align="center">
+  
+  [![GitHub contributors](https://img.shields.io/github/contributors/EmanOthman21/InstabugLogin)](https://github.com/EmanOthman21/InstabugLogin/contributors)
+  [![GitHub issues](https://img.shields.io/github/issues/EmanOthman21/InstabugLogin)](https://github.com/EmanOthman21/InstabugLogin/issues)
+  [![GitHub forks](https://img.shields.io/github/forks/EmanOthman21/InstabugLogin)](https://github.com/AbdallahHemdan/EmanOthman21/InstabugLogin/network)
+  [![GitHub stars](https://img.shields.io/github/stars/EmanOthman21/InstabugLogin)](https://github.com/EmanOthman21/InstabugLogin/stargazers)
+  [![GitHub license](https://img.shields.io/github/license/EmanOthman21/InstabugLogin)](https://github.com/EmanOthman21/InstabugLogin/blob/master/LICENSE)
+  
+  <img src="https://img.shields.io/github/languages/count/EmanOthman21/InstabugLogin" />
+  <img src="https://img.shields.io/github/languages/top/EmanOthman21/InstabugLogin" />
+  <img src="https://img.shields.io/github/languages/code-size/EmanOthman21/InstabugLogin" />
+  <img src="https://img.shields.io/github/issues-pr-raw/EmanOthman21/InstabugLogin" />
+
+</div>
 
 ## Table of Contents
 
@@ -21,7 +36,7 @@
 - [SASS](https://sass-lang.com/)
 - [Cypress](https://www.cypress.io/)
 
-## How to run
+## Getting Started
 ### Installation
 
 1. **_Clone the repository_**
@@ -130,4 +145,4 @@ InstaLogin
  
 ## License
 
-> This software is licensed under MIT License, See [License](https://github.com/EmanOthman21/InstabugLogin/blob/main/LICENSE) for more information ©ُEmanOthman.
+> This software is licensed under MIT License, See [License](https://github.com/EmanOthman21/InstabugLogin/blob/main/LICENSE) for more information ©EmanOthman.

@@ -130,4 +130,4 @@ InstaLogin
  
 ## License
 
-> This software is licensed under MIT License, See [License](https://github.com/EmanOthman21/InstabugLogin/blob/main/LICENSE) for more information ©AbdallahHemdan.
+> This software is licensed under MIT License, See [License](https://github.com/EmanOthman21/InstabugLogin/blob/main/LICENSE) for more information ©ُEmanOthman.

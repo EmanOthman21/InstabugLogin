@@ -40,12 +40,12 @@ export default {
     margin: $spacing-x-s auto;
   }
   &__welcome {
-    @include text(normal, 26px, $color-label);
+    @include text(26px, $color-label);
   }
   &__btn {
     @include inputArea();
     @include customBorder($color-light-blue, $color-light-blue);
-    @include text(bold, $text-md, $color-white);
+    @include text($text-md, $color-white, bold);
     margin-top: $spacing-x-s;
     height: $spacing-x-md;
     width: 12.5em;

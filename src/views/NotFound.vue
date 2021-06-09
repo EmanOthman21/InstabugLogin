@@ -27,11 +27,11 @@ export default {
     margin: $spacing-x-s auto;
   }
   &__title {
-    @include text(bold, 26px, $color-dark-blue);
+    @include text(26px, $color-dark-blue, bold);
     display: block;
   }
   &__txt {
-    @include text(normal, $text-md, $color-not-found);
+    @include text($text-md, $color-not-found);
     margin-top: $spacing-x-s;
     display: block;
   }

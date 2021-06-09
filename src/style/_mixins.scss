@@ -11,7 +11,7 @@
   display: block;
 }
 
-@mixin text($fontWeight, $fontSize, $textColor) {
+@mixin text($fontSize, $textColor,$fontWeight:normal) {
   text-decoration: none;
   font-weight: $fontWeight;
   font-size: $fontSize;

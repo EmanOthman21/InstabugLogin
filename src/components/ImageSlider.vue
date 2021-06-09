@@ -73,7 +73,7 @@ export default {
   }
 
   &__txt {
-    @include text(normal, 26px, $color-white);
+    @include text(26px, $color-white);
     margin: 50px 0;
   }
   &__dot {

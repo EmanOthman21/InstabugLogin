@@ -101,7 +101,7 @@ export default {
         : false;
       if (exist) {
         localStorage.setItem("userEmail", this.email);
-        this.$router.push("/welcome");
+        this.$router.push("/");
       } else {
         this.loginError = true;
       }
@@ -129,17 +129,17 @@ export default {
     position: relative;
     top: 0px;
     left: -112px;
-    @include text(normal, $text-sm, $color-label);
+    @include text($text-sm, $color-label);
   }
   &__anchor {
-    @include text(normal, $text-sm, $color-light-gray);
+    @include text($text-sm, $color-light-gray);
     position: relative;
     top: 0px;
     right: -110px;
   }
   &__button {
     @include inputArea();
-    @include text(normal, $text-sm, $color-white);
+    @include text($text-sm, $color-white);
     @include customBorder($color-light-blue, $color-light-blue);
     height: $spacing-x-md;
     width: 410px;
@@ -153,12 +153,12 @@ export default {
     }
   }
   &__error {
-    @include text(normal, 11px, $color-error);
+    @include text(11px, $color-error);
     float: left;
     margin-left: 175px;
   }
   &__options {
-    @include text(normal, 12px, $color-label);
+    @include text(12px, $color-label);
     margin: 10px 0;
     position: relative;
     left: 20px;

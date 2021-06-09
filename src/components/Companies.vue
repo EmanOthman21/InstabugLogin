@@ -38,7 +38,7 @@ export default {
     align-items: center;
   }
   &__title {
-    @include text(normal, $text-sm, $color-companies);
+    @include text($text-sm, $color-companies);
   }
   &__img {
     margin: $spacing-xs;

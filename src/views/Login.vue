@@ -73,13 +73,13 @@ export default {
 }
 
 .instabug {
-  @include text(normal, 24px, $color-label);
+  @include text(2rem, $color-label);
   display: block;
   margin: 1em 0;
 }
 .social__button {
   @include inputArea();
-  @include text(bold, $text-md, $color-white);
+  @include text($text-md, $color-white, bold);
   padding: $spacing-s 0 0 0;
   &__img {
     width: $spacing-xx-s;
@@ -110,7 +110,7 @@ export default {
   width: 400px;
 
   &__title {
-    @include text(bold, $text-md, $color-dark-gray);
+    @include text($text-md, $color-dark-gray, bold);
     background: $color-white;
     padding: 0 $spacing-xs;
   }

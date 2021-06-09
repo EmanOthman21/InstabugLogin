@@ -94,8 +94,30 @@ InstaLogin
 
 </div>
 
-## Contributors
+### Screenshots
+<h3 align="center">Login Page</h3>
 
+![image](https://user-images.githubusercontent.com/47359992/121408313-90e67d80-c960-11eb-8500-45beb57af5be.png)
+
+![image](https://user-images.githubusercontent.com/47359992/121407740-ebcba500-c95f-11eb-9616-b62947f8463b.png)
+
+![image](https://user-images.githubusercontent.com/47359992/121408170-6694c000-c960-11eb-9e0e-9093bd319f9e.png)
+
+![image](https://user-images.githubusercontent.com/47359992/121408900-2aae2a80-c961-11eb-8a6b-54daa6df49d6.png)
+
+![image](https://user-images.githubusercontent.com/47359992/121409096-621cd700-c961-11eb-9fc2-8a0ce6f7a381.png)
+
+
+![image](https://user-images.githubusercontent.com/47359992/121409205-87114a00-c961-11eb-84b3-0687f6e51ad1.png)
+
+<h3 align="center">Home Page</h3>
+
+![image](https://user-images.githubusercontent.com/47359992/121409347-ae681700-c961-11eb-825f-e9ea340bee7e.png)
+
+<h3 align="center">404 Page</h3>
+
+![image](https://user-images.githubusercontent.com/47359992/121409431-cb9ce580-c961-11eb-90da-652f5bf89b57.png)
+## Contributors
 <table>
   <tr>
     <td align="center">

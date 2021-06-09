@@ -43,6 +43,15 @@
     >
       Log In
     </button>
+    <div class="form__options">
+      <span class="form__signup">
+        Don't have an account?
+        <router-link to="/login" class="form__link"> Sign up </router-link>
+      </span>
+      <router-link to="/login" class="form__link">
+        <span> Login via SSO </span>
+      </router-link>
+    </div>
   </form>
 </template>
 
@@ -113,7 +122,8 @@ export default {
       color: $color-light-gray;
     }
   }
-  &__label {
+  &__label,
+  &__signup {
     float: left;
     margin-left: 190px;
     @include text(normal, $text-sm, $color-label);
@@ -138,6 +148,14 @@ export default {
     @include text(normal, 11px, $color-error);
     float: left;
     margin-left: 190px;
+  }
+  &__options {
+    @include text(normal, 11px, $color-label);
+    margin: 10px 0;
+  }
+  &__link {
+    color: $color-btn-hover;
+    text-decoration: none;
   }
 }
 .invalid {

@@ -25,9 +25,10 @@
       id="password"
       type="password"
       class="form__input"
+      :class="{ invalid: !validPassword }"
       v-model="password"
       placeholder="8+ Characters"
-      @blur="validatePassword"
+      @input="validatePassword"
     />
     <span class="form__error" v-if="!validPassword"
       >Password must be 6 characters or more</span
@@ -36,7 +37,7 @@
     <button
       type="submit"
       class="form__button"
-      :disabled="!(validEmail && validPassword)"
+      :disabled="!(validEmail && validPassword && email && password)"
     >
       Log In
     </button>
@@ -120,9 +121,16 @@ export default {
   }
   &__button {
     @include inputArea();
-    @include customBorder($color-light-gray, $color-light-gray);
     @include text(normal, 14px, $color-white);
+    @include customBorder($color-light-blue, $color-light-blue);
     height: 40px;
+    &:hover {
+      background-color: $color-btn-hover;
+    }
+    &:disabled {
+      @include customBorder($color-light-gray, $color-light-gray);
+      cursor: not-allowed;
+    }
   }
   &__error {
     float: left;

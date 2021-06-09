@@ -1,6 +1,6 @@
 <template>
   <form class="form" @submit.prevent="login">
-    <div class="login__error" v-if="loginError">
+    <div class="login__error" v-if="loginError" id="incorrect_data">
       <span class="login__error__text">
         Your email and/or password are correct
       </span>
@@ -16,7 +16,7 @@
       placeholder="you@company.com"
       @blur="validateEmail()"
     />
-    <span class="form__error" v-if="!validEmail"
+    <span class="form__error" id="invalid_email" v-if="!validEmail"
       >Enter a valid email address</span
     >
     <br />
@@ -36,6 +36,7 @@
     >
     <br />
     <button
+      id="submit"
       type="submit"
       class="form__button"
       :disabled="!(validEmail && validPassword && email && password)"

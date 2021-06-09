@@ -5,7 +5,7 @@
         Your email and/or password are correct
       </span>
     </div>
-    <label for="email" class="form__label">Work Email</label>
+    <label for="email" class="form__label email">Work Email</label>
     <br />
     <input
       id="email"
@@ -19,9 +19,11 @@
     <span class="form__error" id="invalid_email" v-if="!validEmail"
       >Enter a valid email address</span
     >
-    <br />
+    <br v-if="!validEmail" />
     <label for="password" class="form__label">Password</label>
-    <a href="/login" class="form__anchor">Forget Password?</a><br />
+    <router-link to="/login" class="form__anchor">
+      Forget Password?
+    </router-link>
     <input
       id="password"
       type="password"
@@ -34,7 +36,7 @@
     <span class="form__error" v-if="!validPassword"
       >Password must be 6 characters or more</span
     >
-    <br />
+    <!-- <br /> -->
     <button
       id="submit"
       type="submit"
@@ -48,7 +50,7 @@
         Don't have an account?
         <router-link to="/login" class="form__link"> Sign up </router-link>
       </span>
-      <router-link to="/login" class="form__link">
+      <router-link to="/login" class="form__link form__right">
         <span> Login via SSO </span>
       </router-link>
     </div>
@@ -116,7 +118,7 @@ export default {
     @include inputArea();
     @include customBorder($color-white, $color-light-gray);
     color: $color-label;
-    padding: $spacing-xxs 0 $spacing-xxs $spacing-xs;
+    padding: $spacing-xxs 0 $spacing-xxs $spacing-s;
     outline: none;
     &::placeholder {
       color: $color-light-gray;
@@ -124,18 +126,24 @@ export default {
   }
   &__label,
   &__signup {
-    float: left;
-    margin-left: 190px;
+    position: relative;
+    top: 0px;
+    left: -112px;
     @include text(normal, $text-sm, $color-label);
   }
   &__anchor {
     @include text(normal, $text-sm, $color-light-gray);
+    position: relative;
+    top: 0px;
+    right: -110px;
   }
   &__button {
     @include inputArea();
     @include text(normal, $text-sm, $color-white);
     @include customBorder($color-light-blue, $color-light-blue);
     height: $spacing-x-md;
+    width: 410px;
+    margin: 1em auto 0.5em;
     &:hover {
       background-color: $color-btn-hover;
     }
@@ -147,15 +155,21 @@ export default {
   &__error {
     @include text(normal, 11px, $color-error);
     float: left;
-    margin-left: 190px;
+    margin-left: 175px;
   }
   &__options {
-    @include text(normal, 11px, $color-label);
+    @include text(normal, 12px, $color-label);
     margin: 10px 0;
+    position: relative;
+    left: 20px;
   }
   &__link {
     color: $color-btn-hover;
     text-decoration: none;
+  }
+  &__right {
+    position: relative;
+    right: -64px;
   }
 }
 .invalid {
@@ -165,9 +179,12 @@ export default {
   @include customBorder($color-light-semion, $color-label);
   border-radius: 3px;
   color: $color-label;
-  max-width: 25vw;
+  max-width: 400px;
   margin: $spacing-xx-s auto;
   text-align: start;
   padding: $spacing-xs 0 $spacing-xs $spacing-xxs;
+}
+.email {
+  left: -168px;
 }
 </style>

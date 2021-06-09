@@ -63,6 +63,7 @@ export default {
 @import "../style/_mixins.scss";
 
 .right-col {
+  max-height: 100vh;
   width: 50%;
   float: left;
   margin-top: 3.125em;
@@ -104,7 +105,7 @@ export default {
   display: block;
   line-height: 2px;
   margin: $spacing-x-s auto;
-  max-width: 25vw;
+  width: 400px;
 
   &__title {
     @include text(bold, $text-md, $color-dark-gray);

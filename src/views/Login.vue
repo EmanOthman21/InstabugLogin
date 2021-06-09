@@ -1,6 +1,6 @@
 <template>
   <div class="container login">
-    <div class="row">
+    <div>
       <ImageSlider />
       <div class="right-col">
         <img src="../assets/logo.svg" alt="logo" />
@@ -37,6 +37,7 @@
           <span class="divider__title">OR</span>
         </div>
         <LoginForm />
+        <Companies />
       </div>
     </div>
   </div>
@@ -45,12 +46,14 @@
 <script>
 import ImageSlider from "../components/ImageSlider.vue";
 import LoginForm from "../components/LoginForm.vue";
+import Companies from "../components/Companies.vue";
 
 export default {
   name: "Login",
   components: {
     ImageSlider,
     LoginForm,
+    Companies,
   },
 };
 </script>
@@ -69,7 +72,7 @@ export default {
 .instabug {
   @include text(normal, 24px, $color-label);
   display: block;
-  margin: 20px 0;
+  margin: 15px 0;
 }
 .social__button {
   @include inputArea();
@@ -94,11 +97,7 @@ export default {
   @include customBorder($color-white, $color-dark-gray);
   color: $color-dark-gray;
 }
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
+
 .divider {
   background-color: $color-light-gray;
   height: 1px;
